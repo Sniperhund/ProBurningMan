@@ -30,6 +30,8 @@ document.addEventListener("mousemove", (e) => {
 
     // Clamping to container boundaries
     const minLeft = Math.min(0, mapContainer.clientWidth - map.clientWidth)
+
+    // BUG: This doesn't compute the right value (yet)
     const minTop = -1417
 
     /*console.log(
