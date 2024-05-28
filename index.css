@@ -1,13 +1,13 @@
 body {
-    height: 100vh;
-    max-height: 100vh;
     width: 100vw;
+    height: 100vh;
     background-color: #defcff;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .radial-background {
-    position: absolute;
+    position: fixed;
 
     background: #e3ed83;
     background: radial-gradient(
@@ -24,14 +24,16 @@ body {
 
     width: calc(200vw);
     height: calc(100vh + 100px);
-    z-index: -1;
+    z-index: -2;
 }
 
 .circle {
+    z-index: -1;
+
     height: 830px;
     width: 830px;
 
-    position: absolute;
+    position: fixed;
     bottom: -630px;
     left: 50%;
     transform: translateX(-50%);
@@ -100,11 +102,13 @@ p {
     max-width: 780px;
     width: 100%;
     text-align: center;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     #image-container {
         width: 100%;
-        height: 100%;
+        height: 410px;
         position: relative;
         overflow: hidden;
         cursor: grab;
