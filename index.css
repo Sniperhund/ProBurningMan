@@ -51,55 +51,10 @@ body {
     );
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 27px;
-    font-weight: bold;
-}
-
 h2 {
     font-weight: bold;
     opacity: 0.75;
     margin-bottom: 10px;
-}
-
-hr {
-    max-width: var(--max-width);
-    margin: 0 auto 37px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 55px;
-    max-width: var(--max-width);
-
-    ul {
-        display: flex;
-        width: 100%;
-        list-style: none;
-        justify-content: space-between;
-
-        a {
-            font-size: 3rem;
-            font-weight: bold;
-            display: inline-block;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: rgba(168, 99, 9, 0.75);
-            transform: translateY(10px);
-        }
-    }
-}
-
-p {
-    margin: 0 auto;
-    text-align: center;
-    max-width: var(--max-width);
-    font-size: 2.5rem;
-    margin-bottom: 37px;
 }
 
 #map {

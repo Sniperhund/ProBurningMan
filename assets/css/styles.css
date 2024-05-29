@@ -32,3 +32,48 @@ a {
     text-decoration: none;
     color: black;
 }
+
+p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: var(--max-width);
+    font-size: 2.5rem;
+    margin-bottom: 37px;
+}
+
+nav {
+    justify-content: center;
+    margin: 0 auto 55px;
+
+    hr {
+        max-width: var(--max-width);
+        margin: 0 auto 37px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 27px;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-between;
+        max-width: var(--max-width);
+        margin: 0 auto;
+
+        a {
+            font-size: 3rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: rgba(168, 99, 9, 0.75);
+            transform: translateY(10px);
+        }
+    }
+}
