@@ -20,6 +20,8 @@ body {
     font-size: 1.6rem;
 
     background-color: #fffcf5;
+
+    margin-bottom: 25vh;
 }
 
 h1 {
@@ -28,6 +30,18 @@ h1 {
 
 h2 {
     font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.5rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2rem;
 }
 
 hr {

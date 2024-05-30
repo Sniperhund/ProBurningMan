@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Galleri</title>
+        <title>Billet</title>
         <link rel="stylesheet" href="/assets/css/styles.css" />
         <link rel="stylesheet" href="/billet/billet.css" />
         <script src="/assets/js/app.js" defer></script>
@@ -23,5 +23,154 @@
                 <li><a href="/kontakt">Kontakt</a></li>
             </ul>
         </nav>
+
+        <article id="introduction-text">
+            <h3>Black Rock City 2024</h3>
+            <h4>25. august – 2. september 2024</h4>
+            <p>
+                Én gang om året samles titusindvis af mennesker i Nevadas Black
+                Rock Desert for at skabe Black Rock City, en midlertidig
+                metropol dedikeret til fællesskab, kunst, selvudfoldelse og
+                selvstændighed. I denne smeltedigel af kreativitet er alle
+                velkomne.
+                <br /><br />Vi er begejstrede for at bygge Black Rock City
+                sammen med dig igen i 2024! Læs om vores tema “Curiouser &
+                Curiouser”
+            </p>
+        </article>
+
+        <section class="checkout deactive" id="checkout">
+            <div id="checkout-items">
+                <article>
+                    <div>
+                        <h4>575</h4>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                    <h3>BURNING MAN 2024 TICKET</h3>
+                    <div>
+                        <h3>1</h3>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+                        <img
+                            src="/assets/icons/minus.svg"
+                            alt="Minus"
+                            onclick="removeTicket(event)"
+                        />
+                        <img
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addTicket(event)"
+                        />
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <p>89</p>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                    <p>Survival Kit</p>
+                    <div>
+                        <p>1</p>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+                        <img
+                            src="/assets/icons/minus.svg"
+                            alt="Minus"
+                            onclick="removeSurvivalKit(event)"
+                        />
+                        <img
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addSurvivalKit(event)"
+                        />
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <p>149</p>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                    <p>Food and drinks pass</p>
+                    <div>
+                        <p>1</p>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+                        <img
+                            src="/assets/icons/minus.svg"
+                            alt="Minus"
+                            onclick="removeFoodAndDrinks(event)"
+                        />
+                        <img
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addFoodAndDrinks(event)"
+                        />
+                    </div>
+                </article>
+            </div>
+            <section id="total">
+                <article id="climate">
+                    <div>
+                        <div>
+                            <img src="/assets/icons/leaf.svg" alt="Leaf" />
+                            <h5>Klima bidrag</h5>
+                            <h5>5</h5>
+                            <img
+                                src="/assets/icons/dollar-sign.svg"
+                                alt="Dollar sign"
+                            />
+                        </div>
+
+                        <span onclick="toggleKlima(event)">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="54"
+                                height="54"
+                                viewBox="0 0 54 54"
+                            >
+                                <path
+                                    id="Icon_akar-circle-plus-fill"
+                                    data-name="Icon akar-circle-plus-fill"
+                                    d="M28.5,1.5a27,27,0,1,0,27,27A27,27,0,0,0,28.5,1.5Zm2.455,36.818a2.455,2.455,0,1,1-4.909,0V30.955H18.682a2.455,2.455,0,1,1,0-4.909h7.364V18.682a2.455,2.455,0,1,1,4.909,0v7.364h7.364a2.455,2.455,0,1,1,0,4.909H30.955Z"
+                                    transform="translate(-1.5 -1.5)"
+                                    fill="#8ABE43"
+                                />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <small>
+                        Bidrag til kompensation for dit køb. Dette gebyr går
+                        direkte til vores udligningsprojekter.
+                    </small>
+                    <small>Læs mere</small>
+                </article>
+                <article id="total-checkout">
+                    <h5>Total</h5>
+                    <div id="price">
+                        <div>
+                            <p id="checkout-amount">0</p>
+                            <img
+                                src="/assets/icons/dollar-sign.svg"
+                                alt="Dollar sign"
+                            />
+                        </div>
+
+                        <hr />
+
+                        <button>Checkout</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <aside></aside>
+        <!-- Kurven -->
     </body>
 </html>
