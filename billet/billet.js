@@ -1,6 +1,10 @@
 const checkout = document.getElementById("checkout")
 const checkoutAmount = document.getElementById("checkout-amount")
 
+const ticketAmount = document.getElementById("ticket-amount")
+const survivalKitAmount = document.getElementById("survival-kit-amount")
+const foodAndDrinksAmount = document.getElementById("food-and-drinks-amount")
+
 Array.prototype.removeByValue = function (val) {
     for (var i = 0; i < this.length; i++) {
         if (this[i] === val) {
@@ -24,6 +28,10 @@ function computeNewPrice() {
     if (tickets <= 0) tickets = 0
     if (survivalKit <= 0) survivalKit = 0
     if (foodAndDrinks <= 0) foodAndDrinks = 0
+
+    ticketAmount.innerText = tickets
+    survivalKitAmount.innerText = survivalKit
+    foodAndDrinksAmount.innerText = foodAndDrinks
 
     amount += tickets * 575
     amount += survivalKit * 89
