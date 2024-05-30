@@ -1,6 +1,5 @@
 body {
     width: 100vw;
-    height: 150vh;
     background-color: #defcff;
     display: flex;
     flex-direction: column;
@@ -72,6 +71,7 @@ h2 {
         position: relative;
         overflow: hidden;
         cursor: grab;
+        border: 2px solid #707070;
     }
 
     #image {
@@ -85,6 +85,5 @@ h2 {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        border: 1px solid #707070;
     }
 }
