@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     background-color: #defcff;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ h2 {
 }
 
 #map {
-    margin: auto auto 0;
+    margin: 27px auto 0;
     max-width: var(--max-width);
     width: 100%;
     text-align: center;
@@ -76,6 +76,7 @@ h2 {
 
     #image {
         position: absolute;
+        transform: rotateZ(-45deg);
         top: -1000px;
         left: -540px;
         user-drag: none;
@@ -84,5 +85,6 @@ h2 {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+        border: 1px solid #707070;
     }
 }
