@@ -85,5 +85,6 @@ h2 {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+        border: 1px solid #707070;
     }
 }
