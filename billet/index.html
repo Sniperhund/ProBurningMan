@@ -53,11 +53,9 @@
                     <div>
                         <h3>1</h3>
                         <img src="/assets/icons/xmark.svg" alt="X" />
-                        <img
-                            src="/assets/icons/minus.svg"
-                            alt="Minus"
-                            onclick="removeTicket(event)"
-                        />
+                        <span onclick="removeTicket(event)">
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
                         <img
                             src="/assets/icons/akar-circle-plus-fill.svg"
                             alt="Circle with plus"
@@ -77,11 +75,9 @@
                     <div>
                         <p>1</p>
                         <img src="/assets/icons/xmark.svg" alt="X" />
-                        <img
-                            src="/assets/icons/minus.svg"
-                            alt="Minus"
-                            onclick="removeSurvivalKit(event)"
-                        />
+                        <span onclick="removeSurvivalKit(event)">
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
                         <img
                             src="/assets/icons/akar-circle-plus-fill.svg"
                             alt="Circle with plus"
@@ -101,11 +97,9 @@
                     <div>
                         <p>1</p>
                         <img src="/assets/icons/xmark.svg" alt="X" />
-                        <img
-                            src="/assets/icons/minus.svg"
-                            alt="Minus"
-                            onclick="removeFoodAndDrinks(event)"
-                        />
+                        <span onclick="removeFoodAndDrinks(event)">
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
                         <img
                             src="/assets/icons/akar-circle-plus-fill.svg"
                             alt="Circle with plus"
@@ -170,7 +164,12 @@
             </section>
         </section>
 
-        <aside></aside>
+        <section id="info">
+            <form onsubmit="return false"></form>
+            <form onsubmit="return false"></form>
+        </section>
+
         <!-- Kurven -->
+        <aside></aside>
     </body>
 </html>
