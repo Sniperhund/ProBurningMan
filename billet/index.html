@@ -27,7 +27,7 @@
         <article id="introduction-text">
             <h3>Black Rock City 2024</h3>
             <h4>25. august – 2. september 2024</h4>
-            <p>
+            <p id="desc">
                 Én gang om året samles titusindvis af mennesker i Nevadas Black
                 Rock Desert for at skabe Black Rock City, en midlertidig
                 metropol dedikeret til fællesskab, kunst, selvudfoldelse og
@@ -145,9 +145,9 @@
                     </small>
                     <small>Læs mere</small>
                 </article>
-                <article id="total-checkout">
+                <article class="total-checkout">
                     <h5>Total</h5>
-                    <div id="price">
+                    <div class="price">
                         <div>
                             <p id="checkout-amount">0</p>
                             <img
@@ -158,18 +158,235 @@
 
                         <hr />
 
-                        <button>Checkout</button>
+                        <button onclick="checkoutBtn(event)">Checkout</button>
                     </div>
                 </article>
             </section>
         </section>
 
-        <section id="info">
-            <form onsubmit="return false"></form>
-            <form onsubmit="return false"></form>
-        </section>
+        <section class="info deactive-pay" id="info">
+            <aside id="kurv">
+                <h3>Kurven</h3>
 
-        <!-- Kurven -->
-        <aside></aside>
+                <article>
+                    <h5 class="kurv-title">BURNING MAN 2024 TICKET</h5>
+                    <div>
+                        <span
+                            onclick="removeTicket(event)"
+                            style="margin-right: 7px"
+                        >
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
+                        <img
+                            style="margin-right: 17px"
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addTicket(event)"
+                        />
+
+                        <h5 id="kurv-ticket-amount">1</h5>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+
+                        <h5>575</h5>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                </article>
+                <article>
+                    <h5 class="kurv-title">Survival kit</h5>
+                    <div>
+                        <span
+                            onclick="removeSurvivalKit(event)"
+                            style="margin-right: 7px"
+                        >
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
+                        <img
+                            style="margin-right: 17px"
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addSurvivalKit(event)"
+                        />
+
+                        <h5 id="kurv-survival-kit-amount">1</h5>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+
+                        <h5>89</h5>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                </article>
+                <article>
+                    <h5 class="kurv-title">Food and drinks pass</h5>
+                    <div>
+                        <span
+                            onclick="removeFoodAndDrinks(event)"
+                            style="margin-right: 7px"
+                        >
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
+                        <img
+                            style="margin-right: 17px"
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="addFoodAndDrinks(event)"
+                        />
+
+                        <h5 id="kurv-food-and-drinks-amount">1</h5>
+                        <img src="/assets/icons/xmark.svg" alt="X" />
+
+                        <h5>149</h5>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                </article>
+                <article>
+                    <h5 class="kurv-title">Klima bidrag</h5>
+                    <div>
+                        <span
+                            onclick="toggleKlima(event)"
+                            style="margin-right: 7px"
+                        >
+                            <img src="/assets/icons/minus.svg" alt="Minus" />
+                        </span>
+
+                        <img
+                            src="/assets/icons/akar-circle-plus-fill.svg"
+                            alt="Circle with plus"
+                            onclick="toggleKlima(event)"
+                        />
+
+                        <img
+                            src="/assets/icons/leaf.svg"
+                            alt="Leaf"
+                            style="margin: 0 26px"
+                        />
+
+                        <h5>5</h5>
+                        <img
+                            src="/assets/icons/dollar-sign.svg"
+                            alt="Dollar sign"
+                        />
+                    </div>
+                </article>
+
+                <section
+                    class="total-checkout"
+                    style="margin-top: 26px; justify-content: flex-end"
+                >
+                    <h5>Total</h5>
+                    <div class="price">
+                        <div>
+                            <p id="kurv-total">0</p>
+                            <img
+                                src="/assets/icons/dollar-sign.svg"
+                                alt="Dollar sign"
+                            />
+                        </div>
+
+                        <hr />
+                    </div>
+                </section>
+            </aside>
+
+            <h3>Informationer</h3>
+
+            <div
+                style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                "
+            >
+                <p>Kredit eller debit kort</p>
+                <img src="/assets/icons/credit-card.svg" alt="Kredit kort" />
+            </div>
+
+            <form onsubmit="return false">
+                <article>
+                    <label for="navn">Navn:</label>
+                    <input type="text" name="navn" id="navn" required />
+                </article>
+                <article>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required />
+                </article>
+                <article>
+                    <label for="tlf">Tlf:</label>
+                    <input type="tel" name="tlf" id="tlf" required />
+                </article>
+                <article>
+                    <label for="adresse">Adresse:</label>
+                    <input type="text" name="adresse" id="adresse" required />
+                </article>
+                <div>
+                    <article>
+                        <label for="by">By:</label>
+                        <input type="text" name="by" id="by" required />
+                    </article>
+                    <article>
+                        <label for="postnummer">Postnummer:</label>
+                        <input
+                            type="text"
+                            name="postnummer"
+                            id="postnummer"
+                            required
+                        />
+                    </article>
+                </div>
+                <article>
+                    <label for="land">Land:</label>
+                    <input type="text" name="land" id="land" required />
+                </article>
+            </form>
+
+            <form onsubmit="return false">
+                <article>
+                    <label for="kortnummer">Kortnummer:</label>
+                    <input
+                        type="text"
+                        name="kortnummer"
+                        id="kortnummer"
+                        required
+                    />
+                </article>
+                <div>
+                    <article>
+                        <label for="udløbsdato">Udløbsdato:</label>
+                        <input
+                            type="date"
+                            name="udløbsdato"
+                            id="udløbsdato"
+                            required
+                        />
+                    </article>
+                    <article>
+                        <label for="cvv">CVC/CVV:</label>
+                        <input type="text" name="cvv" id="cvv" required />
+                    </article>
+                </div>
+                <article>
+                    <label for="kortnavn" style="width: 100px"
+                        >Navn på kort:</label
+                    >
+                    <input type="text" name="kortnavn" id="kortnavn" required />
+                </article>
+
+                <a href="#" id="pay"></a>
+
+                <small
+                    >Ved at afgive bestilling accepterer du vores vilkår og
+                    betingelser og databeskyttelsespolitik. Du vil lejlighedsvis
+                    modtage vores seneste nyheder og tilbud. Men ingen
+                    bekymring! Du vil til enhver tid kunne afmelde dette.</small
+                >
+            </form>
+        </section>
     </body>
 </html>
