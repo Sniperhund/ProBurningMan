@@ -90,10 +90,19 @@ nav {
             font-weight: bold;
             display: inline-block;
             transition: transform 0.2s ease-in-out;
+            padding: 1px 17px;
+            color: #fffcf5;
+            background-color: #555555;
+            border-radius: 3rem;
+        }
+
+        a.active {
+            color: #f7e3ae;
+            transform: translateY(10px);
         }
 
         a:hover {
-            color: rgba(168, 99, 9, 0.75);
+            color: #f7e3ae;
             transform: translateY(10px);
         }
     }
