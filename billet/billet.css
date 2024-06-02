@@ -12,6 +12,12 @@ p {
     text-align: center;
 }
 
+img,
+svg,
+button {
+    cursor: pointer;
+}
+
 .price {
     width: 90px;
 
@@ -100,6 +106,7 @@ p {
 
                 img:nth-child(2) {
                     margin-left: auto;
+                    cursor: initial;
                 }
 
                 p {
@@ -147,6 +154,10 @@ p {
                     border: 1px solid #555555;
                     border-radius: 8px;
                     padding: 1px 10px;
+
+                    img {
+                        cursor: initial;
+                    }
 
                     h5:nth-child(3) {
                         margin-left: auto;
