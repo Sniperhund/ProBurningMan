@@ -256,6 +256,14 @@ button {
     }
 }
 
+#kurv-container {
+    position: fixed;
+    top: 268px;
+    right: calc(50% - 680px);
+    max-width: 280px;
+    width: 100%;
+}
+
 aside {
     max-width: 280px;
     width: 100%;
@@ -263,9 +271,6 @@ aside {
     background-color: #f7e3ae;
     border: 1px solid #707070;
     color: #555555;
-    position: absolute;
-    top: -2px;
-    right: calc(-280px + -10px);
 
     h3,
     h5 {
