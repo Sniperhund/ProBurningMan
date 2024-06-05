@@ -64,14 +64,14 @@ function removeTicket(event) {
 
     tickets--
 
-    if (tickets <= 0) {
+    /*if (tickets <= 0) {
         checkout.classList.add("deactive")
         info.classList.add("deactive-pay")
         aside.classList.add("deactive-pay")
         tickets = 0
         survivalKit = 0
         foodAndDrinks = 0
-    }
+    }*/
 
     computeNewPrice()
 }
